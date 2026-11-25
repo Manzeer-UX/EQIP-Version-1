@@ -25,8 +25,20 @@ export const hero = {
   body: "Your organisation’s software holds years of business decisions, customer commitments, rules, and hard-won knowledge. EQIP helps you see it clearly—so you can modernise, change, validate, and move forward with confidence.",
   primary: { label: "Talk to an Expert", href: "#contact" } satisfies Link,
   secondary: { label: "Explore the Evidence", href: "#evidence" } satisfies Link,
-  tagline: "Software intelligence for organisations that cannot afford to guess.",
 };
+
+// Scrolling keyword band under the hero.
+export const keywords = [
+  "Knowledge Graph",
+  "Quality Engineering",
+  "Zero Trust Authentication",
+  "Predictive Quality Intelligence",
+  "ML Monitoring",
+  "Model Result Verification",
+  "Cognitive Analysis",
+  "Orchestration Process",
+  "End to End",
+];
 
 export const problem = {
   eyebrow: "The problem",

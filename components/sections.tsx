@@ -1,5 +1,19 @@
 import type { CSSProperties } from "react";
-import { agents, capabilities, closing, evidence, experience, field, footer, hero, matters, nav, problem, visible } from "@/lib/content";
+import {
+  agents,
+  capabilities,
+  closing,
+  evidence,
+  experience,
+  field,
+  footer,
+  hero,
+  keywords,
+  matters,
+  nav,
+  problem,
+  visible,
+} from "@/lib/content";
 import { sceneAttrs } from "@/lib/sceneAttrs";
 import { PILLAR_ART } from "./PillarArt";
 import { HorizontalTrack, Question, Story, TiltCard, Trail } from "./interactive";
@@ -50,13 +64,15 @@ export function Hero() {
   );
 }
 
-/* ============ Tagline marquee ============ */
+/* ============ Keyword marquee ============ */
 export function Marquee() {
+  // Each half repeats the list twice so the count is even and the white/blue alternation stays seamless when the loop restarts.
+  const run = [...keywords, ...keywords];
   const half = (
     <>
-      {[0, 1, 2].map((i) => (
+      {run.map((k, i) => (
         <span className="marquee__item" key={i}>
-          <span className={i % 2 ? "is-serif" : undefined}>{hero.tagline}</span>
+          <span className={i % 2 ? "is-accent" : undefined}>{k}</span>
           <b className="qtail" />
         </span>
       ))}
@@ -64,7 +80,7 @@ export function Marquee() {
   );
   return (
     <div className="marquee">
-      <p className="sr-only">{hero.tagline}</p>
+      <p className="sr-only">{keywords.join(", ")}</p>
       <div className="marquee__track" aria-hidden="true">
         {half}
         {half}

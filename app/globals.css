@@ -635,7 +635,7 @@ html:not(.js) .loader {
 .marquee__track {
   display: flex;
   width: max-content;
-  animation: marquee 48s linear infinite;
+  animation: marquee 120s linear infinite;
 }
 .marquee__item {
   display: flex;
@@ -648,7 +648,7 @@ html:not(.js) .loader {
   letter-spacing: -0.035em;
   white-space: nowrap;
 }
-.marquee__item .is-serif {
+.marquee__item .is-accent {
   color: var(--signal);
 }
 .marquee .qtail {
