@@ -47,7 +47,6 @@ type SplitProps = { text: string; as?: ElementType; className?: string; delay?: 
 export function SplitText({ text, as: Tag = "h2", className, delay = 0 }: SplitProps) {
   let i = 0;
   // Odd segments (between *asterisks*) are emphasised.
-  const segments = text.split("*");
   const words = (seg: string) =>
     seg
       .split(/( +)/) // split on normal spaces only, so non-breaking spaces stay inside a word
@@ -64,9 +63,21 @@ export function SplitText({ text, as: Tag = "h2", className, delay = 0 }: SplitP
         ),
       );
 
+  const segmented = (line: string) =>
+    line.split("*").map((seg, s) => (s % 2 ? <em key={s}>{words(seg)}</em> : <Fragment key={s}>{words(seg)}</Fragment>));
+
+  // "\n" forces a line break; each line is kept together where there is room (see `.line` in globals.css).
+  const lines = text.split("\n");
+
   return (
     <Tag className={className} data-split="" style={delay ? ({ "--d": `${delay}ms` } as CSSProperties) : undefined}>
-      {segments.map((seg, s) => (s % 2 ? <em key={s}>{words(seg)}</em> : <Fragment key={s}>{words(seg)}</Fragment>))}
+      {lines.length > 1
+        ? lines.map((line, l) => (
+            <span className="line" key={l}>
+              {segmented(line)}
+            </span>
+          ))
+        : segmented(text)}
     </Tag>
   );
 }

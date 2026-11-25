@@ -2,6 +2,7 @@
  * All homepage copy, taken verbatim from "Homepage Content.docx".
  * `*word*` marks words rendered in the blue accent colour inside headlines.
  * ` ` (non-breaking space) only keeps the last two words of a headline together.
+ * `\n` starts a new line in a headline; each line stays on one row where the screen is wide enough.
  */
 
 export type Link = { label: string; href: string };
@@ -39,7 +40,7 @@ export const problem = {
 
 export const visible = {
   eyebrow: "What EQIP makes visible",
-  title: "Clarity before change. *Confidence after it.*",
+  title: "Clarity before change.\n*Confidence after it.*",
   body: "EQIP brings together the evidence already distributed across your software estate: how applications behave, where dependencies sit, what business rules matter, and where change creates risk.",
   body2: "It gives leaders and delivery teams a clearer basis for decisions that are usually made under pressure.",
   pillars: [
