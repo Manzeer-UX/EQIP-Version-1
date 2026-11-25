@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { nav } from "@/lib/content";
 import { getLenis } from "@/lib/scroll";
-import { Button } from "./ui";
+import { Arrow, Button } from "./ui";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -86,20 +86,34 @@ export function Nav() {
       </header>
 
       <div className="mobile-menu" id="mobile-menu" aria-hidden={!open}>
-        <nav aria-label="Mobile">
-          {[...nav.links, nav.cta].map((l, i) => (
+        <div className="mobile-menu__glow" aria-hidden="true" />
+        <p className="mobile-menu__eyebrow" style={{ transitionDelay: open ? "120ms" : "0ms" }}>
+          <b className="qtail" aria-hidden="true" />
+          Navigate
+        </p>
+        <nav className="mobile-menu__links" aria-label="Mobile">
+          {nav.links.map((l, i) => (
             <a
               key={l.href}
               href={l.href}
-              className={l === nav.cta ? "is-cta" : undefined}
-              style={{ transitionDelay: open ? `${160 + i * 60}ms` : "0ms" }}
+              className={active === l.href.slice(1) ? "is-active" : undefined}
+              style={{ transitionDelay: open ? `${180 + i * 55}ms` : "0ms" }}
               tabIndex={open ? 0 : -1}
               onClick={() => setOpen(false)}
             >
-              {l.label}
+              <span className="mobile-menu__idx">{String(i + 1).padStart(2, "0")}</span>
+              <span className="mobile-menu__label">{l.label}</span>
+              <Arrow className="mobile-menu__arrow" />
             </a>
           ))}
         </nav>
+        <div className="mobile-menu__foot" style={{ transitionDelay: open ? `${200 + nav.links.length * 55}ms` : "0ms" }}>
+          <a className="btn btn--signal btn--lg mobile-menu__cta" href={nav.cta.href} tabIndex={open ? 0 : -1} onClick={() => setOpen(false)}>
+            <span>{nav.cta.label}</span>
+            <Arrow />
+          </a>
+          <p className="mobile-menu__note">Software intelligence · Intelligent QA</p>
+        </div>
       </div>
     </>
   );
