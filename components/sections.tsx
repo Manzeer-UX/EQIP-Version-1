@@ -66,7 +66,8 @@ export function Hero() {
 
 /* ============ Keyword marquee ============ */
 export function Marquee() {
-  // Each half repeats the list twice so the count is even and the white/blue alternation stays seamless when the loop restarts.
+  // Each half repeats the list twice: wide enough to fill large screens, and an even count so the
+  // white/blue alternation stays seamless when the loop restarts.
   const run = [...keywords, ...keywords];
   const half = (
     <>

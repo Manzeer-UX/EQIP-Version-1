@@ -30,14 +30,11 @@ export const hero = {
 // Scrolling keyword band under the hero.
 export const keywords = [
   "Knowledge Graph",
-  "Quality Engineering",
   "Zero Trust Authentication",
   "Predictive Quality Intelligence",
   "ML Monitoring",
   "Model Result Verification",
   "Cognitive Analysis",
-  "Orchestration Process",
-  "End to End",
 ];
 
 export const problem = {
