@@ -65,7 +65,7 @@ export const visible = {
 
 export const capabilities = {
   eyebrow: "The capabilities behind EQIP",
-  title: "Eleven capabilities. *One connected intelligence.*",
+  title: "Eleven capabilities.\n*One connected intelligence.*",
   body: "Each outcome EQIP delivers is powered by capabilities that work together, so what is learned in one part of the estate informs every decision that follows.",
   // Grouped under the four outcomes from "What EQIP makes visible".
   groups: [
