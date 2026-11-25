@@ -11,6 +11,7 @@ export const nav = {
   links: [
     { label: "What We See", href: "#what-we-see" },
     { label: "Capabilities", href: "#capabilities" },
+    { label: "AI Agents", href: "#agents" },
     { label: "Where It Matters", href: "#where-it-matters" },
     { label: "Evidence", href: "#evidence" },
     { label: "About EQIP", href: "#about" },
@@ -130,6 +131,51 @@ export const capabilities = {
           text: "Understand, analyse, test and validate applications built across different generations of technology.",
         },
       ],
+    },
+  ],
+};
+
+export const agents = {
+  eyebrow: "Core intelligence modules",
+  title: "20 AI Agents, *One Platform.*",
+  body: "Purpose-built agents that collaborate across the entire testing lifecycle—no human in the loop required.",
+  modules: [
+    {
+      stage: "Requirement analysis",
+      title: "Discovery & Risk Intelligence",
+      agents: ["Requirement Intelligence Agent", "Domain Risk Simulation Agent", "Change Impact Intelligence Agent"],
+    },
+    {
+      stage: "Test planning",
+      title: "Test Engineering",
+      agents: [
+        "Test Case Co-Designer Agent",
+        "Exploratory Testing Assistant Agent",
+        "Test Data Intelligence Agent",
+        "Locator Intelligence Agent",
+        "Automation Script Generation Agent",
+        "Self-Healing & Stability Advisor Agent",
+      ],
+    },
+    {
+      stage: "Test execution",
+      title: "Execution Intelligence",
+      agents: ["Test Predictive Advisor Agent", "Execution Orchestrator Agent", "Environment Intelligence Agent"],
+    },
+    {
+      stage: "Test execution",
+      title: "Security, Performance & UX",
+      agents: ["Security Intelligence Agent", "Performance & Scalability Agent", "Accessibility & UX Agent"],
+    },
+    {
+      stage: "Defect reporting & release decision",
+      title: "Decision & Intelligence",
+      agents: ["Failure Intelligence Agent", "Test Report Intelligence Agent", "Insights & Trend Intelligence Agent"],
+    },
+    {
+      stage: "Observability",
+      title: "Production Intelligence",
+      agents: ["Observability Correlation Agent", "Continuous Learning Agent"],
     },
   ],
 };

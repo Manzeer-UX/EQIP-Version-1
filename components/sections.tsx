@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { capabilities, closing, evidence, experience, field, footer, hero, matters, nav, problem, visible } from "@/lib/content";
+import { agents, capabilities, closing, evidence, experience, field, footer, hero, matters, nav, problem, visible } from "@/lib/content";
 import { sceneAttrs } from "@/lib/sceneAttrs";
 import { PILLAR_ART } from "./PillarArt";
 import { HorizontalTrack, Question, Story, TiltCard, Trail } from "./interactive";
@@ -190,6 +190,53 @@ export function Capabilities() {
   );
 }
 
+/* ============ Core intelligence modules (AI agents) ============ */
+export function Agents() {
+  let n = 0;
+  return (
+    <section className="agents" id="agents" {...sceneAttrs({ state: 2, tilt: 0.75, scale: 1.15, opacity: 0.3, opacityMobile: 0.2 })}>
+      <div className="container">
+        <div className="agents__head">
+          <Eyebrow idx="04">{agents.eyebrow}</Eyebrow>
+          <SplitText className="h2" text={agents.title} />
+          <p className="lead" data-reveal="">
+            {agents.body}
+          </p>
+        </div>
+
+        <div className="modules">
+          {agents.modules.map((m, mi) => (
+            <article
+              className="module"
+              key={m.title}
+              data-reveal=""
+              style={{ "--d": `${(mi % 3) * 110}ms` } as CSSProperties}
+            >
+              <header className="module__head">
+                <div>
+                  <p className="module__stage">{m.stage}</p>
+                  <h3 className="module__title">{m.title}</h3>
+                </div>
+                <span className="module__idx">{pad(mi + 1)}</span>
+              </header>
+              <ol className="module__list" start={n + 1}>
+                {m.agents.map((a) => (
+                  <li className="agent" key={a}>
+                    <span className="agent__num" aria-hidden="true">
+                      {pad(++n)}
+                    </span>
+                    {a}
+                  </li>
+                ))}
+              </ol>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ============ Where confidence matters most ============ */
 export function WhereItMatters() {
   return (
@@ -199,7 +246,7 @@ export function WhereItMatters() {
       {...sceneAttrs({ state: 2, tilt: 0.85, scale: 1.25, opacity: 0.55 })}
       head={
         <div className="container where__head">
-          <Eyebrow idx="04">{matters.eyebrow}</Eyebrow>
+          <Eyebrow idx="05">{matters.eyebrow}</Eyebrow>
           <SplitText className="h2" text={matters.title} />
         </div>
       }
@@ -229,7 +276,7 @@ export function Evidence() {
     <section className="evidence" id="evidence" {...sceneAttrs({ state: 2, tilt: 0.5, opacity: 0 })}>
       <div className="container evidence__grid">
         <div className="evidence__intro">
-          <Eyebrow idx="05" dark>
+          <Eyebrow idx="06" dark>
             {evidence.eyebrow}
           </Eyebrow>
           <SplitText className="h2" text={evidence.title} />
@@ -257,7 +304,7 @@ export function About() {
       <div className="container">
         <div className="about__grid">
           <div className="about__copy">
-            <Eyebrow idx="06">{experience.eyebrow}</Eyebrow>
+            <Eyebrow idx="07">{experience.eyebrow}</Eyebrow>
             <SplitText className="h2" text={experience.title} />
             <p className="lead" data-reveal="">
               {experience.body}
@@ -293,7 +340,7 @@ export function Field() {
     <section className="field" id="field" {...sceneAttrs({ state: 2, tilt: 1.1, scale: 1.5, opacity: 0.35 })}>
       <div className="container">
         <div className="field__head">
-          <Eyebrow idx="07">{field.eyebrow}</Eyebrow>
+          <Eyebrow idx="08">{field.eyebrow}</Eyebrow>
           <SplitText className="h2" text={field.title} />
         </div>
         <div className="stories">
