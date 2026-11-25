@@ -12,7 +12,7 @@ export function Loader() {
   return (
     <div className="loader" aria-hidden="true">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="loader__logo" src="/assets/eqip-lockup.png" alt="" width={1400} height={980} />
+      <img className="loader__logo" src="/assets/eqip-logo.png" alt="" width={560} height={134} />
       <div className="loader__bar">
         <i />
       </div>
@@ -290,7 +290,7 @@ export function Footer() {
       <div className="container footer__grid">
         <a className="footer__logo" href="#top" aria-label="EQIP — back to top">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/eqip-lockup.png" alt="EQIP — Intelligent QA" width={1400} height={980} loading="lazy" />
+          <img src="/assets/eqip-logo.png" alt="EQIP — Intelligent QA" width={560} height={134} loading="lazy" />
         </a>
         <p className="footer__line">{footer.line}</p>
         <nav className="footer__nav" aria-label="Footer">

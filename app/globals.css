@@ -383,7 +383,7 @@ html:not(.js) .loader {
   visibility: hidden;
 }
 .loader__logo {
-  width: min(280px, 60vw);
+  width: min(260px, 60vw);
   animation: loader-logo 1.3s var(--ease) both;
 }
 .loader__bar {
@@ -460,11 +460,12 @@ html:not(.js) .loader {
   flex: none;
 }
 .nav__logo img {
-  width: 136px;
+  display: block;
+  width: 120px;
   transition: width 0.4s var(--ease);
 }
 .nav.is-scrolled .nav__logo img {
-  width: 120px;
+  width: 104px;
 }
 .nav__links {
   display: flex;
@@ -1487,7 +1488,8 @@ html:not(.js) .stratum {
   align-items: start;
 }
 .footer__logo img {
-  width: clamp(150px, 13vw, 200px);
+  display: block;
+  width: clamp(140px, 12vw, 180px);
 }
 .footer__line {
   max-width: 30ch;

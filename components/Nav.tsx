@@ -59,7 +59,7 @@ export function Nav() {
         <div className="nav__inner">
           <a className="nav__logo" href="#top" aria-label="EQIP — home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/eqip-lockup.png" alt={`${nav.brand} — Intelligent QA`} width={1400} height={980} />
+            <img src="/assets/eqip-logo.png" alt={`${nav.brand} — Intelligent QA`} width={560} height={134} />
           </a>
           <nav className="nav__links" aria-label="Primary">
             {nav.links.map((l) => (
