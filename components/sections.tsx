@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { closing, evidence, experience, field, footer, hero, matters, nav, problem, visible } from "@/lib/content";
+import { capabilities, closing, evidence, experience, field, footer, hero, matters, nav, problem, visible } from "@/lib/content";
 import { sceneAttrs } from "@/lib/sceneAttrs";
 import { PILLAR_ART } from "./PillarArt";
 import { HorizontalTrack, Question, Story, TiltCard, Trail } from "./interactive";
@@ -141,6 +141,55 @@ export function WhatWeSee() {
   );
 }
 
+/* ============ The capabilities behind EQIP ============ */
+export function Capabilities() {
+  let n = 0;
+  return (
+    <section
+      className="caps"
+      id="capabilities"
+      {...sceneAttrs({ state: 2, x: -0.5, tilt: 0.65, scale: 1.05, opacity: 0.4, xMobile: 0, opacityMobile: 0.25 })}
+    >
+      <div className="container">
+        <div className="caps__head">
+          <Eyebrow idx="03">{capabilities.eyebrow}</Eyebrow>
+          <SplitText className="h2" text={capabilities.title} />
+          <p className="lead" data-reveal="">
+            {capabilities.body}
+          </p>
+        </div>
+
+        <div className="caps__groups">
+          {capabilities.groups.map((g, gi) => (
+            <div className="caps__group" key={g.label}>
+              <h3 className="caps__label" data-reveal="">
+                <span className="caps__label-idx">{pad(gi + 1)}</span>
+                {g.label}
+              </h3>
+              <ul className="caps__list">
+                {g.items.map((c, ci) => (
+                  <li
+                    className="cap"
+                    key={c.title}
+                    data-reveal=""
+                    style={{ "--d": `${ci * 90}ms` } as CSSProperties}
+                  >
+                    <span className="cap__num" aria-hidden="true">
+                      {pad(++n)}
+                    </span>
+                    <h4 className="cap__title">{c.title}</h4>
+                    <p className="cap__text">{c.text}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ============ Where confidence matters most ============ */
 export function WhereItMatters() {
   return (
@@ -150,7 +199,7 @@ export function WhereItMatters() {
       {...sceneAttrs({ state: 2, tilt: 0.85, scale: 1.25, opacity: 0.55 })}
       head={
         <div className="container where__head">
-          <Eyebrow idx="03">{matters.eyebrow}</Eyebrow>
+          <Eyebrow idx="04">{matters.eyebrow}</Eyebrow>
           <SplitText className="h2" text={matters.title} />
         </div>
       }
@@ -180,7 +229,7 @@ export function Evidence() {
     <section className="evidence" id="evidence" {...sceneAttrs({ state: 2, tilt: 0.5, opacity: 0 })}>
       <div className="container evidence__grid">
         <div className="evidence__intro">
-          <Eyebrow idx="04" dark>
+          <Eyebrow idx="05" dark>
             {evidence.eyebrow}
           </Eyebrow>
           <SplitText className="h2" text={evidence.title} />
@@ -208,7 +257,7 @@ export function About() {
       <div className="container">
         <div className="about__grid">
           <div className="about__copy">
-            <Eyebrow idx="05">{experience.eyebrow}</Eyebrow>
+            <Eyebrow idx="06">{experience.eyebrow}</Eyebrow>
             <SplitText className="h2" text={experience.title} />
             <p className="lead" data-reveal="">
               {experience.body}
@@ -244,7 +293,7 @@ export function Field() {
     <section className="field" id="field" {...sceneAttrs({ state: 2, tilt: 1.1, scale: 1.5, opacity: 0.35 })}>
       <div className="container">
         <div className="field__head">
-          <Eyebrow idx="06">{field.eyebrow}</Eyebrow>
+          <Eyebrow idx="07">{field.eyebrow}</Eyebrow>
           <SplitText className="h2" text={field.title} />
         </div>
         <div className="stories">

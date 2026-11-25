@@ -936,6 +936,100 @@ html:not(.js) .loader {
   stroke: var(--trace);
 }
 
+/* ---------- capabilities ---------- */
+.caps {
+  position: relative;
+  padding: clamp(100px, 14vh, 180px) 0 clamp(110px, 15vh, 190px);
+}
+.caps__head {
+  max-width: 760px;
+  margin-bottom: clamp(64px, 9vw, 120px);
+}
+.caps__head .h2 {
+  margin-bottom: 32px;
+}
+.caps__group {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 72px);
+  padding: clamp(40px, 4.5vw, 64px) 0;
+  border-top: 1px solid var(--line);
+}
+.caps__group:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.caps__label {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  align-self: start;
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: clamp(1.35rem, 1.9vw, 1.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+.caps__label-idx {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--signal);
+}
+.caps__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(36px, 3.6vw, 56px) clamp(28px, 3.4vw, 56px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cap {
+  position: relative;
+  padding-top: 22px;
+}
+.cap::before,
+.cap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+}
+.cap::before {
+  right: 0;
+  background: var(--line);
+}
+.cap::after {
+  width: 48px;
+  background: var(--signal);
+  transition: width 0.7s var(--ease);
+}
+.cap:hover::after {
+  width: 100%;
+}
+.cap__num {
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--graphite-300);
+}
+.cap__title {
+  margin: 0 0 10px;
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 1.35vw, 1.35rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+.cap__text {
+  max-width: 44ch;
+  font-size: 15.5px;
+  color: var(--text-2);
+}
+
 /* ---------- where it matters (horizontal) ---------- */
 .where {
   position: relative;
@@ -1524,7 +1618,8 @@ html:not(.js) .stratum {
   .evidence__grid,
   .about__grid,
   .about__foot,
-  .stories {
+  .stories,
+  .caps__group {
     grid-template-columns: minmax(0, 1fr);
   }
   .evidence__intro {
@@ -1558,7 +1653,8 @@ html:not(.js) .stratum {
   body {
     font-size: 16px;
   }
-  .pillars {
+  .pillars,
+  .caps__list {
     grid-template-columns: minmax(0, 1fr);
   }
   .pillar {

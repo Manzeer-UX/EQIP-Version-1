@@ -1,6 +1,6 @@
 /**
  * All homepage copy, taken verbatim from "Homepage Content.docx".
- * `*word*` marks words rendered in the italic accent face inside headlines.
+ * `*word*` marks words rendered in the blue accent colour inside headlines.
  * ` ` (non-breaking space) only keeps the last two words of a headline together.
  */
 
@@ -10,6 +10,7 @@ export const nav = {
   brand: "EQIP",
   links: [
     { label: "What We See", href: "#what-we-see" },
+    { label: "Capabilities", href: "#capabilities" },
     { label: "Where It Matters", href: "#where-it-matters" },
     { label: "Evidence", href: "#evidence" },
     { label: "About EQIP", href: "#about" },
@@ -56,6 +57,79 @@ export const visible = {
     {
       title: "Evolve without blind spots",
       text: "Make modernisation, releases, and investment decisions with a living view of software reality.",
+    },
+  ],
+};
+
+export const capabilities = {
+  eyebrow: "The capabilities behind EQIP",
+  title: "Eleven capabilities. *One connected intelligence.*",
+  body: "Each outcome EQIP delivers is powered by capabilities that work together, so what is learned in one part of the estate informs every decision that follows.",
+  // Grouped under the four outcomes from "What EQIP makes visible".
+  groups: [
+    {
+      label: "Understand what you own",
+      items: [
+        {
+          title: "Software Intelligence Fabric",
+          text: "A continuously connected intelligence layer that brings together code, data, requirements, business logic, dependencies, tests and operational insights.",
+        },
+        {
+          title: "Digital Archaeology",
+          text: "Reconstructing undocumented business logic, system dependencies and hidden workflows embedded in legacy software.",
+        },
+        {
+          title: "Application Behavior Intelligence",
+          text: "Understand application workflows, dependencies and behavioral patterns to create context-aware test scenarios.",
+        },
+        {
+          title: "Software Due Diligence Engine",
+          text: "Understand the real condition, complexity and risk of an application before acquiring, migrating or investing in it.",
+        },
+      ],
+    },
+    {
+      label: "Preserve what matters",
+      items: [
+        {
+          title: "Engineering Memory Graph",
+          text: "A connected knowledge structure that preserves the reasoning, decisions, dependencies, defects and evolution history of software.",
+        },
+        {
+          title: "Quality Knowledge Graph",
+          text: "Connect requirements, application components, test cases, defects, dependencies and historical execution data into a contextual quality intelligence layer.",
+        },
+      ],
+    },
+    {
+      label: "Validate what changes",
+      items: [
+        {
+          title: "Multi-Agent Quality Orchestration Framework",
+          text: "Specialized AI agents collaborate to interpret requirements, generate tests, execute scenarios, analyze failures and produce quality insights.",
+        },
+        {
+          title: "Generative Test Synthesis",
+          text: "Automatically create relevant test scenarios, test cases, test data and validation scripts by understanding an application’s requirements, source code, business logic, architecture and historical behaviour.",
+        },
+        {
+          title: "Risk-Weighted Test Orchestration",
+          text: "Intelligently deciding what to test, how deeply to test it, and in what order, based on the risk associated with each change or component.",
+        },
+      ],
+    },
+    {
+      label: "Evolve without blind spots",
+      items: [
+        {
+          title: "Closed-Loop Engineering Intelligence",
+          text: "Creating a continuous feedback loop between development, testing, production behaviour, defects and future improvements.",
+        },
+        {
+          title: "Bridge Legacy and Modern Technology",
+          text: "Understand, analyse, test and validate applications built across different generations of technology.",
+        },
+      ],
     },
   ],
 };

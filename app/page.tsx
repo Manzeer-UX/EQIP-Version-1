@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import { PageEffects } from "@/components/PageEffects";
 import {
   About,
+  Capabilities,
   Closing,
   Evidence,
   Field,
@@ -27,6 +28,7 @@ export default function Home() {
         <Marquee />
         <Problem />
         <WhatWeSee />
+        <Capabilities />
         <WhereItMatters />
         <Evidence />
         <About />
