@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Geist_Mono, Instrument_Serif, Inter, Space_Grotesk } from "next/font/google";
+import { Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
 import { footer, hero } from "@/lib/content";
 import "./globals.css";
 
 /* Typography (brand guide): Space Grotesk for display & headlines, Inter for text & interface,
-   plus an italic serif accent and a mono for labels. */
+   and a mono for labels. Accent words stay in the headline font, coloured blue. */
 const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display", display: "swap" });
-const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-serif", display: "swap" });
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
@@ -23,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en-GB"
-      className={`${display.variable} ${serif.variable} ${sans.variable} ${mono.variable}`}
+      className={`${display.variable} ${sans.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
       <head>

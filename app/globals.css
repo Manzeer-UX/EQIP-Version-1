@@ -28,7 +28,6 @@
   --ease-io: cubic-bezier(0.7, 0, 0.2, 1);
 
   --f-display: var(--font-display), "Helvetica Neue", Arial, sans-serif;
-  --f-serif: var(--font-serif), Georgia, serif;
   --f-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
   --f-mono: var(--font-mono), ui-monospace, Menlo, monospace;
 }
@@ -162,12 +161,8 @@ main,
 .display em,
 .h2 em,
 .closing__title em {
-  font-family: var(--f-serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.015em;
+  font-style: normal;
   color: var(--signal);
-  font-size: 1.06em;
 }
 .lead {
   font-size: clamp(1.05rem, 1.3vw, 1.3rem);
@@ -645,12 +640,7 @@ html:not(.js) .loader {
   white-space: nowrap;
 }
 .marquee__item .is-serif {
-  font-family: var(--f-serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  color: var(--paper-300);
-  font-size: 1.08em;
+  color: var(--signal);
 }
 .marquee .qtail {
   width: 15px;
@@ -773,11 +763,11 @@ html:not(.js) .loader {
   color: var(--text-2);
 }
 .question__answer {
-  font-family: var(--f-serif);
-  font-style: italic;
+  font-family: var(--f-display);
+  font-weight: 500;
   font-size: clamp(2.4rem, 5.6vw, 5.4rem);
   line-height: 1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.04em;
   color: var(--signal);
 }
 .question.is-static {
