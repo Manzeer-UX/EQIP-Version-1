@@ -147,14 +147,14 @@ main,
 /* ---------- type ---------- */
 .display {
   font-family: var(--f-display);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(3.1rem, 8.2vw, 9rem);
   line-height: 0.92;
   letter-spacing: -0.05em;
 }
 .h2 {
   font-family: var(--f-display);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(2.5rem, 5.6vw, 6rem);
   line-height: 0.96;
   letter-spacing: -0.045em;
@@ -552,7 +552,7 @@ html:not(.js) .loader {
 }
 .mobile-menu a {
   font-family: var(--f-display);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(2.2rem, 9vw, 3.6rem);
   line-height: 1.05;
   letter-spacing: -0.045em;
@@ -738,7 +738,7 @@ html:not(.js) .loader {
 }
 .question__q {
   font-family: var(--f-display);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(3rem, 10.5vw, 12rem);
   line-height: 0.9;
   letter-spacing: -0.055em;
@@ -865,7 +865,7 @@ html:not(.js) .loader {
 .pillar__title {
   margin: 12px 0;
   font-family: var(--f-display);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(1.45rem, 1.75vw, 1.8rem);
   line-height: 1.04;
   letter-spacing: -0.035em;
@@ -1048,7 +1048,7 @@ html:not(.js) .loader {
   max-width: 14ch;
   margin-bottom: 14px;
   font-family: var(--f-display);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(1.6rem, 2.3vw, 2.3rem);
   line-height: 1.02;
   letter-spacing: -0.04em;
@@ -1367,7 +1367,7 @@ html:not(.js) .stratum {
   max-width: 16ch;
   margin-bottom: 40px;
   font-family: var(--f-display);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(1.7rem, 2.6vw, 2.6rem);
   line-height: 1;
   letter-spacing: -0.04em;
@@ -1464,7 +1464,7 @@ html:not(.js) .stratum {
 .closing__title {
   max-width: 17ch;
   font-family: var(--f-display);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(2.6rem, 6.6vw, 7.4rem);
   line-height: 0.95;
   letter-spacing: -0.05em;

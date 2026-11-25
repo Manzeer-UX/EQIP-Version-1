@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Geist_Mono, Instrument_Serif, Inter, Space_Grotesk } from "next/font/google";
 import { footer, hero } from "@/lib/content";
 import "./globals.css";
 
-/* Typography: characterful display grotesque, an italic serif accent, a crisp text sans and a mono for labels. */
-const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display", axes: ["opsz"], display: "swap" });
+/* Typography (brand guide): Space Grotesk for display & headlines, Inter for text & interface,
+   plus an italic serif accent and a mono for labels. */
+const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-serif", display: "swap" });
-const sans = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
