@@ -626,7 +626,7 @@ html:not(.js) .loader {
 .marquee {
   position: relative;
   overflow: hidden;
-  padding: 26px 0;
+  padding: 18px 0;
   border-block: 1px solid var(--line);
   background: rgba(7, 10, 18, 0.45);
   backdrop-filter: blur(8px);
@@ -635,25 +635,25 @@ html:not(.js) .loader {
 .marquee__track {
   display: flex;
   width: max-content;
-  animation: marquee 120s linear infinite;
+  animation: marquee 80s linear infinite;
 }
 .marquee__item {
   display: flex;
   align-items: center;
-  gap: 44px;
-  padding-right: 44px;
+  gap: 28px;
+  padding-right: 28px;
   font-family: var(--f-display);
-  font-weight: 500;
-  font-size: clamp(1.4rem, 2.5vw, 2.3rem);
-  letter-spacing: -0.035em;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  letter-spacing: -0.01em;
   white-space: nowrap;
 }
 .marquee__item .is-accent {
   color: var(--signal);
 }
 .marquee .qtail {
-  width: 15px;
-  height: 19px;
+  width: 9px;
+  height: 11px;
 }
 @keyframes marquee {
   to {
