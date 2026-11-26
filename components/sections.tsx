@@ -401,9 +401,9 @@ export function Footer() {
   return (
     <footer className="footer" {...sceneAttrs({ state: 3, tilt: 1.25, scale: 1.8, opacity: 0.3 })}>
       <div className="container footer__grid">
-        <a className="footer__logo" href="#top" aria-label="EQIP — back to top">
+        <a className="footer__logo" href="#top" aria-label="EQIP - back to top">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/eqip-logo.png" alt="EQIP — Intelligent QA" width={560} height={134} loading="lazy" />
+          <img src="/assets/eqip-logo.png" alt="EQIP - Intelligent QA" width={560} height={134} loading="lazy" />
         </a>
         <p className="footer__line">{footer.line}</p>
         <nav className="footer__nav" aria-label="Footer">

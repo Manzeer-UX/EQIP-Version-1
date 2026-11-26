@@ -10,7 +10,7 @@ const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap
 const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
-  title: `EQIP — ${hero.title.replace(/\*/g, "").replace(/ /g, " ")}`,
+  title: `EQIP - ${hero.title.replace(/\*/g, "").replace(/ /g, " ")}`,
   description: footer.line,
 };
 

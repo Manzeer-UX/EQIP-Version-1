@@ -22,7 +22,7 @@ export const nav = {
 
 export const hero = {
   title: "Know your business *before* it becomes a risk.",
-  body: "Your organisation’s software holds years of business decisions, customer commitments, rules, and hard-won knowledge. EQIP helps you see it clearly—so you can modernise, change, validate, and move forward with confidence.",
+  body: "Your organisation’s software holds years of business decisions, customer commitments, rules, and hard-won knowledge. EQIP helps you see it clearly - so you can modernise, change, validate, and move forward with confidence.",
   primary: { label: "Talk to an Expert", href: "#contact" } satisfies Link,
   secondary: { label: "Explore the Evidence", href: "#evidence" } satisfies Link,
 };
@@ -39,9 +39,9 @@ export const keywords = [
 
 export const problem = {
   eyebrow: "The problem",
-  title: "Your business remembers more than your documentation does.",
+  title: "The most valuable knowledge in your business may be the least documented.",
   body: "Across every enterprise are applications that have outlived their original teams, systems connected in ways no diagram captures, and business rules buried in code, processes, and people’s memory.",
-  bridge: "That is manageable—until a transformation, migration, acquisition, or rapid release asks a simple question:",
+  bridge: "That is manageable - until a transformation, migration, acquisition, or rapid release asks a simple question:",
   question: "What will this change affect?",
   answerLead: "For too many organisations, the honest answer is:",
   answer: "we do not know yet.",
@@ -148,7 +148,7 @@ export const capabilities = {
 export const agents = {
   eyebrow: "Core intelligence modules",
   title: "20 AI Agents, *One Platform.*",
-  body: "Purpose-built agents that collaborate across the entire testing lifecycle—no human in the loop required.",
+  body: "Purpose-built agents that collaborate across the entire testing lifecycle - no human in the loop required.",
   modules: [
     {
       stage: "Requirement analysis",
